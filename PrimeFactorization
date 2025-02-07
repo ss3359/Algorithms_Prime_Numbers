@@ -1,0 +1,44 @@
+//
+//  Harpsichord.hpp
+//  MUSIC
+//
+//  Created by Owner on 1/30/25.
+//
+
+#ifndef Harpsichord_hpp
+#define Harpsichord_hpp
+
+#include <stdio.h>
+#include <iostream>
+#include <cmath>
+#include <vector>
+#include <thread>
+#include <iomanip>
+#include <fstream>
+
+void SieveOfEratoshtenes(int n);
+void PrimeFactorization(int n); 
+
+using namespace std;
+
+#endif /* Harpsichord_hpp */
+void PrimeFactorization(int n){
+    cout<<"Factorization of "<<n<<"\n";
+
+    for(int j=2; j<=n; j++){
+        while(n%j==0){
+            cout<<j<<" ";
+            n/=j;
+        }
+        
+    }
+   
+    cout<<endl;
+}
+
+int main() {
+    int n = 110;
+    PrimeFactorization(n);
+    
+    return 0;
+}
